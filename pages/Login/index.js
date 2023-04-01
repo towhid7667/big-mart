@@ -33,7 +33,7 @@ const Index = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button disabled={user.userPhone === phone && user.userPassword === password? false : true} className="py-2 rounded rounded-xl text-white  font-bold text-xl bg-orange-500">Login</button>
+                            <button disabled={user?.userPhone === phone && user?.userPassword === password? false : true} className="py-2 rounded rounded-xl text-white  font-bold text-xl bg-orange-500">Login</button>
                         </div>
                     </div>
                 </div>
