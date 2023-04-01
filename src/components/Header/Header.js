@@ -7,13 +7,13 @@ const Header = () => {
 
     useEffect(() => {
 
-            const itemList = JSON.parse(localStorage.getItem('Products'))
+            const itemList = JSON.parse(localStorage.getItem('Products')) || [];
             console.log(itemList)
             setItems(itemList)
 
 
 
-    }, [ ])
+    }, [items])
 
 
     return (
@@ -35,7 +35,7 @@ const Header = () => {
                                 <span className="font-bold text-lg">{items?.length} Items</span>
 
                                 <div className="card-actions">
-                                    <Link href='/Cart' passHref className="btn btn-primary btn-block">View cart</Link>
+                                    <Link href='/Cart' passHref className="hover:bg-orange-600 px-4 py-3 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl">View cart</Link>
                                 </div>
                             </div>
                         </div>

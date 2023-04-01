@@ -42,7 +42,7 @@ const Id = ({data}) => {
                     <p className="py-6 text-justify">{data.description}</p>
                     <p className="text-2xl font-bold">${data.price}</p>
                     <button onClick={() => handleAddToCart(data)} className="px-4 py-2 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl">Add To Cart</button>
-                    <Link href="/Cart" className="px-4 py-3 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl ml-3">Go To Cart</Link>
+                    <Link href="/Cart" className="hover:bg-orange-600 px-4 py-3 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl ml-3">Go To Cart</Link>
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ const Index = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" onChange={(e) => setPassword(e.target.value) } placeholder="password" className="input input-bordered" />
+                            <input type="password" onChange={(e) => setPassword(e.target.value) } placeholder="password" className="input input-bordered" />
                             <label className="label">
                                 <Link href="/Register" className="label-text-alt link link-hover">Don't Have account?</Link>
                             </label>

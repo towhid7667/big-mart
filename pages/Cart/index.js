@@ -39,7 +39,7 @@ const Index = () => {
 
     return (
         <div className="w-10/12 mx-auto h-screen">
-            <div className="overflow-x-auto mt-10 mb-10">
+            <div className="overflow-x-auto mt-10 mb-10 p-10">
                 <table className="table w-10/12 mx-auto ">
                     {/* head */}
                     <thead>
@@ -58,7 +58,7 @@ const Index = () => {
                         <td>{item.title}</td>
                         <td ><Image className="rounded rounded-xl" width={100} height={100} src={item.image} alt={item.title}/></td>
                         <td>${item.price}</td>
-                        <td><button onClick={() => deleteItem(item.id)} className="px-4 py-2 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl">Delete</button></td>
+                        <td><button onClick={() => deleteItem(item.id)} className="hover:bg-orange-600 px-4 py-2 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl">Delete</button></td>
                     </tr>)}
                     <tr>
                         <th></th>

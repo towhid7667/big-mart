@@ -30,8 +30,8 @@ const Product = ({product}) => {
                 <p>{product.description.slice(0, 100)}</p>
 
                 <div className="card-actions justify-end">
-                    <Link href={`/Products/${product.title}/${product.id.toString()}`} className="px-4 py-2 rounded rounded-xl text-white font-bold bg-orange-500">Details</Link>
-                    <button onClick={() => handleAddToCart(product)} className="px-4 py-2 rounded rounded-xl text-white font-bold bg-orange-500">Add</button>
+                    <Link href={`/Products/${product.title}/${product.id.toString()}`} className="px-4 py-2 rounded rounded-xl text-white font-bold bg-orange-500 hover:bg-orange-600">Details</Link>
+                    <button onClick={() => handleAddToCart(product)} className="px-4 py-2 rounded rounded-xl text-white font-bold bg-orange-500 hover:bg-orange-600">Add</button>
                 </div>
             </div>
         </div>
