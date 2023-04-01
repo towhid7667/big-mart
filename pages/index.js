@@ -6,7 +6,7 @@ import HomePageMain from "@component/src/components/Home/HomePageMain";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({data}) {
+export default function Home({data, productList}) {
   return (
     <>
       <Head>
@@ -15,18 +15,20 @@ export default function Home({data}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       </Head>
-        <HomePageMain data = {data}></HomePageMain>
+        <HomePageMain data = {data} productList={productList}></HomePageMain>
 
     </>
   )
 }
 
 export const getServerSideProps = async () => {
-    const {sliderInfo} = await import('@component/data/data.json')
+    const {sliderInfo, productList} = await import('@component/data/data.json')
     console.log(sliderInfo)
+    console.log(productList)
     return{
         props : {
-            data : sliderInfo
+            data : sliderInfo,
+            productList : productList
         }
     }
 }
