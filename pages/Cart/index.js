@@ -17,6 +17,7 @@ const Index = () => {
 
         if(!localStorage.getItem('User')){
             router.push('/Login')
+                .then()
         }
 
     }, [])
