@@ -13,14 +13,14 @@ const Header = () => {
 
 
 
-    }, [typeof(window) !== 'undefined'? JSON.parse(localStorage.getItem('Products')) : null ])
+    }, [ ])
 
 
     return (
         <header className="navbar bg-slate-100 drop-shadow-md sticky top-0 z-50">
             <div className=" flex justify-between w-11/12 lg:w-10/12 md:w-10/12 mx-auto">
                 <div className=" ">
-                    <Link href="/" passHref className=" text-2xl text-black font-bold hover:bg-gray-200 p-2 rounded rounded-xl ">Big<span className="text-white text-2xl font-bold bg-orange-500  p-2 rounded rounded-xl">Mart</span></Link>
+                    <Link href='/' className=" text-2xl text-black font-bold hover:bg-gray-200 p-2 rounded rounded-xl ">Big<span className="text-white text-2xl font-bold bg-orange-500  p-2 rounded rounded-xl">Mart</span></Link>
                 </div>
                 <div className=" flex items-center">
                     <div className="dropdown dropdown-end">
@@ -35,7 +35,7 @@ const Header = () => {
                                 <span className="font-bold text-lg">{items?.length} Items</span>
 
                                 <div className="card-actions">
-                                    <Link href="/Cart" passHref className="btn btn-primary btn-block">View cart</Link>
+                                    <Link href='/Cart' passHref className="btn btn-primary btn-block">View cart</Link>
                                 </div>
                             </div>
                         </div>

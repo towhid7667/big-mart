@@ -3,17 +3,21 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import HomePageMain from "@component/src/components/Home/HomePageMain";
 import {useEffect} from "react";
+import {useRouter} from "next/router";
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({data, productList}) {
+
     useEffect(() => {
 
         if(!localStorage.getItem('Products')){
             const existingEntries = JSON.parse(localStorage.getItem('Products')) || [];
             localStorage.setItem('Products', JSON.stringify(existingEntries))
         }
+
+
     }, [])
   return (
     <>

@@ -1,8 +1,31 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {console} from "next/dist/compiled/@edge-runtime/primitives/console";
 import Head from "next/head";
+import Link from "next/link";
+import {useRouter} from "next/router";
 
 const Id = ({data}) => {
+    const router = useRouter()
+    useEffect(() => {
+        if(!localStorage.getItem('User')){
+            router.push('/Login')
+        }
+    }, [])
+    const handleAddToCart = (product) => {
+        const existingEntries = JSON.parse(localStorage.getItem('Products')) || [];
+
+        const productInfo = {
+            id : product.id,
+            title : product.title,
+            image : product.image,
+            price : product.price
+
+        }
+
+        existingEntries.push(productInfo)
+        localStorage.setItem("Products", JSON.stringify(existingEntries))
+
+    }
     return (
         <>
         <Head>
@@ -18,7 +41,8 @@ const Id = ({data}) => {
                     <h1 className="text-5xl font-bold">{data.title}</h1>
                     <p className="py-6 text-justify">{data.description}</p>
                     <p className="text-2xl font-bold">${data.price}</p>
-                    <button className="btn btn-primary">Add To Cart</button>
+                    <button onClick={() => handleAddToCart(data)} className="px-4 py-2 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl">Add To Cart</button>
+                    <Link href="/Cart" className="px-4 py-3 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl ml-3">Go To Cart</Link>
                 </div>
             </div>
         </div>
