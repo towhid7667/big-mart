@@ -1,0 +1,66 @@
+import React, {useEffect, useState} from 'react';
+import Image from "next/image";
+
+const Index = () => {
+    const [addedItemsToCart, setAddedItemsToCart] = useState([])
+    const[price , setPrice] = useState(0)
+
+
+
+    useEffect(() => {
+        const addedItems = JSON.parse(localStorage.getItem('Products'))
+        const sum = addedItems.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
+        setAddedItemsToCart(addedItems)
+        setPrice(sum)
+
+    }, [])
+
+
+    const deleteItem = (id) =>{
+
+    }
+
+
+    return (
+        <div className="w-10/12 mx-auto h-screen">
+            <div className="overflow-x-auto mt-10 mb-10">
+                <table className="table w-10/12 mx-auto ">
+                    {/* head */}
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {/* row 1 */}
+                    {addedItemsToCart.map((item, i) => <tr key={item.id}>
+                        <th>{i + 1}</th>
+                        <td>{item.title}</td>
+                        <td ><Image className="rounded rounded-xl" width={100} height={100} src={item.image} alt={item.title}/></td>
+                        <td>${item.price}</td>
+                        <td><button onClick={() => deleteItem()} className="px-4 py-2 text-1xl font-bold bg-orange-500 text-white rounded rounded-xl">Delete</button></td>
+                    </tr>)}
+                    <tr>
+                        <th></th>
+                        <td></td>
+                        <td ></td>
+                        <td> total : ${price}</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div className="w-6/12 justify-center mx-auto flex  gap-5 flex-wrap">
+                <h2 className="text-center text-4xl font-bold w-full mb-5">Ordered Items</h2>
+                {addedItemsToCart.map((item, i) => <Image key={i} src={item.image} width={200} height={200}></Image>)}
+            </div>
+        </div>
+    );
+};
+
+export default Index;

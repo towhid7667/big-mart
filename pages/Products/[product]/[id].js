@@ -17,7 +17,7 @@ const Id = ({data}) => {
                 <div>
                     <h1 className="text-5xl font-bold">{data.title}</h1>
                     <p className="py-6 text-justify">{data.description}</p>
-                    <p className="text-2xl font-bold">{data.price}</p>
+                    <p className="text-2xl font-bold">${data.price}</p>
                     <button className="btn btn-primary">Add To Cart</button>
                 </div>
             </div>
