@@ -38,31 +38,37 @@
 ],  "productList": [
   {
     "id" : 1,
+    "price" : "$20",
     "title": "Body Lotion",
     "image" : "https://images.pexels.com/photos/7262996/pexels-photo-7262996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Body lotion is moisturiser designed to use all over your body. In much the same way we moisturise our face every day, our body benefits from a daily dose of hydration. Body lotions tend to be richer than face moisturisers and are sometimes formulated to tackle specific issues, such as cellulite or toning."
   }, {
     "id" : 2,
+    "price" :  "$5",
     "title": "Memory card",
     "image" : "https://images.pexels.com/photos/7610519/pexels-photo-7610519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "A memory card is an electronic data storage device used for storing digital information, typically using flash memory. These are commonly used in digital portable electronic devices. They allow adding memory to such devices using a card in a socket instead of a protruding USB flash drives."
   } ,{
     "id" : 3,
+    "price" :  "$40",
     "title": "Best watch",
     "image" : "https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "An analog watch or analogue watch is a watch whose display is not digital but rather analog with a traditional clock face. The name is an example of a retronym; it was coined to distinguish analog watches, which had simply been called \"watches\", from newer digital watches."
   } ,{
     "id" : 4,
+    "price" :  "$10",
     "title": "Nature Soap",
     "image" : "https://images.pexels.com/photos/206299/pexels-photo-206299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "True natural soap is made with natural oils, butters and fats. It's mixed with lye and water and cured for 4-6 weeks. Natural soap is made with only essential oils to scent it as fragrance oils can contain a large amount of chemicals used to enhance their scent and increase shelf life"
   } ,{
     "id" : 5,
+    "price" :  "$120",
     "title": "Cannon camera",
     "image" : "https://images.pexels.com/photos/1203803/pexels-photo-1203803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "A camera is an optical instrument that captures images. Most cameras can capture 2D images, while some more advanced models can capture 3D images. At a basic level, most cameras consist of a sealed box, with a small hole that allows light to pass through and capture an image on a light-sensitive surface."
   }, {
     "id" : 6,
+    "price" :  "$16",
     "title": "Chooping Board",
     "image" : "https://images.pexels.com/photos/5645031/pexels-photo-5645031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Cutting the daily vegetables is tough work. Our mothers take a lot of pain to cut vegetables for daily cooking. Modern mothers use a knife to cut vegetables. To cut vegetables by knife, we need chopping board."

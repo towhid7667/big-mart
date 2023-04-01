@@ -22,7 +22,7 @@ export default function Home({data, productList}) {
 }
 
 export const getServerSideProps = async () => {
-    const {sliderInfo, productList} = await import('@component/data/data.json')
+    const {sliderInfo, productList} = await import('data/data.json')
     console.log(sliderInfo)
     console.log(productList)
     return{
