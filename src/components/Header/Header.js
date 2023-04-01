@@ -1,13 +1,14 @@
 import React from 'react';
+import Link from "next/link";
 
 const Header = () => {
     return (
-        <div>
-            <div className="navbar bg-orange-100">
-                <div className="flex-1">
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <header className="navbar bg-slate-100 drop-shadow-md">
+            <div className=" flex justify-between w-11/12 lg:w-10/12 md:w-10/12 mx-auto">
+                <div className=" ">
+                    <Link href="/" className=" text-2xl text-black font-bold hover:bg-gray-200 p-2 rounded rounded-xl ">Big<span className="text-white text-2xl font-bold bg-lime-600  p-2 rounded rounded-xl">Mart</span></Link>
                 </div>
-                <div className="flex-none">
+                <div className=" flex items-center">
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle">
                             <div className="indicator">
@@ -18,7 +19,7 @@ const Header = () => {
                         <div tabIndex={0} className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
                             <div className="card-body">
                                 <span className="font-bold text-lg">8 Items</span>
-                                <span className="text-info">Subtotal: $999</span>
+                                <span className="text-black">Subtotal: $999</span>
                                 <div className="card-actions">
                                     <button className="btn btn-primary btn-block">View cart</button>
                                 </div>
@@ -28,7 +29,7 @@ const Header = () => {
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <img src="https://images.pexels.com/photos/762080/pexels-photo-762080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
@@ -44,7 +45,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
