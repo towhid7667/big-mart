@@ -13,7 +13,7 @@ const Header = () => {
 
 
 
-    }, [items])
+    }, [])
 
 
     return (
